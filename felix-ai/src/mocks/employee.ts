@@ -218,7 +218,7 @@ export const employee: MockData = {
         salary
       FROM employee_ranking
       WHERE ranking = 2`,
-    createdby: "Ashish Aggarwal",
-    createdOn: "8 June 2019"
+    updatedBy: "Ashish Aggarwal",
+    updatedOn: "8 June 2019"
 
 }

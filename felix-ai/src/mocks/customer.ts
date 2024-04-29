@@ -1239,7 +1239,7 @@ export const customer: MockData = {
       FROM CUSTOMER
       WHERE ranking <= 5
       ORDER BY ranking`,
-      createdby: "Aakash Sharma",
-      createdOn: "20 January 2023"
+      updatedBy: "Aakash Sharma",
+      updatedOn: "20 January 2023"
 
 }

@@ -12,8 +12,8 @@ export type MockData = {
     title: string,
     sql: string,
     desc: string,
-    createdby: string,
-    createdOn: string
+    updatedBy: string,
+    updatedOn: string
 }
 
 import { customer } from "./customer";

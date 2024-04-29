@@ -943,19 +943,30 @@ const productTableConfig = [
     { prop: "discontinued", label: "Discontinued", width: 120 },
 
 ]
-export const product:MockData = {
+export const product: MockData = {
     data: productData,
     config: productTableConfig,
     title: "Product",
     id: "product",
     desc: "This table contains information about products",
-    sql: `SELECT
-    grain.product_name,
-    box_size.description,
-    grain.price_per_pound * box_size.box_weight
-  FROM product
-  CROSS JOIN  box_sizes`,
-  createdby: "Anoushka Singh",
-  createdOn: "23 August 2023"
+    sql: `WITH CUSTOMER AS (
+        SELECT
+          ID,
+          last_name,
+          first_name,
+          salary,
+          RANK() OVER (ORDER BY salary DESC) as ranking
+        FROM employee
+      )
+      SELECT
+      CUSTOMER,
+        last_name,
+        first_name,
+        salary
+      FROM CUSTOMER
+      WHERE ranking <= 5
+      ORDER BY ranking`,
+    updatedBy: "Anoushka Singh",
+    updatedOn: "23 August 2023"
 
 }

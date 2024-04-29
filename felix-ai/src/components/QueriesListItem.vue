@@ -1,51 +1,72 @@
 <script setup lang="ts">
-import { type MockData } from "@/mocks"
-const emit = defineEmits(['onLoadData'])
+import {
+    Clock,
+    Edit,
+    Histogram,
+    Aim,
+} from '@element-plus/icons-vue';
+import SQLEditor from '@/components/SQLEditor.vue';
+import { watch, ref } from 'vue';
+
+enum FeatureEvent {
+    EDIT = "edit",
+    VERSION = "version",
+    GRAPH = "graph",
+    SCHEMA = "schema",
+}
 
 const props = defineProps({
     item: {
         type: Object,
         default: () => { }
     },
-
-
+    activeName: {
+        type: String
+    }
 })
+const sqlRef = ref(null)
+
+const emit = defineEmits(['onLoadData', 'onIconClick'])
+
+function onIconClick(type: string) {
+    emit('onIconClick', { type, id: props.item.id });
+}
+
+watch(() => props.activeName, () => {
+    (sqlRef.value as any).refresh();
+})
+
 </script>
 <template>
+    <div class="d-flex justify-content-around w-100 pb-4">
+        <el-button type="primary" :icon="Edit" circle @click="onIconClick(FeatureEvent.EDIT)" />
+        <el-button type="primary" :icon="Clock" circle @click="onIconClick(FeatureEvent.VERSION)" />
+        <el-button type="primary" :icon="Histogram" circle @click="onIconClick(FeatureEvent.GRAPH)" />
+        <el-button type="primary" :icon="Aim" circle @click="onIconClick(FeatureEvent.SCHEMA)" />
+    </div>
     <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">SQL Query</div> <el-button type="primary" plain class="m-2"
             @click="emit('onLoadData', $event)">Load Data</el-button>
     </div>
-    <div class="code-style">
-        {{ props.item.sql }}
-    </div>
+    <SQLEditor :value="props.item.sql" ref="sqlRef"></SQLEditor>
     <el-divider />
     <div class="meta-data">
         <div class="meta-data__desc"> {{ props.item.desc }}</div>
-        <div>Created: {{ props.item.createdOn }} by {{ props.item.createdby }}</div>
+
+        <div><strong>Updated:</strong> {{ props.item.updatedOn }} by {{ props.item.updatedBy }}</div>
         <div></div>
     </div>
 </template>
 
 
 <style lang="scss" scoped>
-.code-style {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #f5f5f5;
-    color: #333;
-    border: 0.1rem solid #ddd;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    max-height: 12rem;
-    padding: 20px;
-}
-
 .meta-data {
     border: 0.1rem solid #ddd;
     border-radius: 0.5rem;
     padding: 1rem;
+
     &__desc {
-        font-size: 16px;
+        margin-bottom: 0.5rem;
     }
 }
 </style>
