@@ -29,7 +29,7 @@ function onExportData() {
 <template>
     <div class="table-container">
         <div class="d-flex flex-row-reverse">
-            <el-button type="primary" class="my-3" @click="onExportData">Export Data</el-button>
+            <el-button v-if="data" type="primary" class="my-3" @click="onExportData">Export Data</el-button>
         </div>
         <div class="table">
             <el-table :data="data" style="width: 100%" height="675">

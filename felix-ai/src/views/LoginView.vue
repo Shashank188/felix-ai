@@ -1,11 +1,11 @@
 <template>
     <div class="login-container">
-        <el-form ref="loginForm" :model="loginForm" class="login-form" @submit.native.prevent="handleLogin">
+        <el-form ref="loginForm" :v-model="state.loginForm" class="login-form" @submit.native.prevent="handleLogin">
             <el-form-item label="Username" prop="username">
-                <el-input v-model="loginForm.username" placeholder="Username"></el-input>
+                <el-input v-model="state.loginForm.username" placeholder="Username"></el-input>
             </el-form-item>
             <el-form-item label="Password" prop="password">
-                <el-input type="password" v-model="loginForm.password" placeholder="Password"></el-input>
+                <el-input type="password" v-model="state.loginForm.password" placeholder="Password"></el-input>
             </el-form-item>
             <el-form-item>
                 <el-button type="primary" native-type="submit">Login</el-button>
@@ -15,14 +15,13 @@
 </template>
    
 <script setup lang="ts">
-import { ref, } from 'vue';
+import { reactive } from 'vue';
 import { useRouter, type Router } from 'vue-router'
 
 import { ElForm, ElFormItem, ElInput, ElButton } from 'element-plus';
 
-const loginForm = ref({
-    username: '',
-    password: '',
+const state = reactive({
+    loginForm: {username: "admin", password: "admin"}
 });
 
 const router: Router = useRouter();

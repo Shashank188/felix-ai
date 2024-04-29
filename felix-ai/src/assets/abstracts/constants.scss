@@ -1,1 +1,11 @@
-$header: 3rem
+$header: 3rem;
+
+:root {
+    --el-color-primary: #2026d2 !important;
+    --el-color-primary-light-3: #7276fb !important;
+    --el-color-primary-light-5: #9fa2fb !important;
+    --el-color-primary-light-7: #c2c4ff !important;
+    --el-color-primary-light-8: #d9ecff !important;
+    --el-color-primary-light-9: #ecf5ff !important;
+    --el-color-primary-dark-2: #335ccc !important;
+}

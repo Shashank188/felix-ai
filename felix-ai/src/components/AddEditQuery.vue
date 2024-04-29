@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { MockData } from '@/mocks';
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
 const state = reactive({
     drawer: false,
@@ -8,7 +8,10 @@ const state = reactive({
     prompt: ''
 })
 
+const sqlRef = ref(null)
+
 const emit = defineEmits(['onSubmit'])
+
 function openQueryDrawer(data: MockData) {
     if (!data.id) {
         data = {
@@ -24,6 +27,9 @@ function openQueryDrawer(data: MockData) {
     }
     state.drawer = true;
     state.data = data;
+    setTimeout(() => {
+        (sqlRef.value as any).refresh();
+    }, 100);
 }
 function closeQueryDrawer() {
     state.drawer = false;

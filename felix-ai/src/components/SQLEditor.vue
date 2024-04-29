@@ -7,16 +7,16 @@
 import Codemirror from "codemirror-editor-vue3";
 import "codemirror/addon/display/placeholder.js";
 import 'codemirror/mode/sql/sql.js';
-import "codemirror/theme/blackboard.css";
+import "codemirror/theme/mdn-like.css";
 
 
-import { ref, reactive, onMounted } from "vue";
+import { ref, reactive } from "vue";
 
 const cmRef = ref(null);
 
 const state = reactive({
     cmOptions: {
-        theme: "blackboard",
+        theme: "mdn-like",
         lineNumbers: true,
         matchBrackets: true,
         indentUnit: 4,
@@ -37,3 +37,8 @@ function refresh() {
 
 defineExpose({ refresh })
 </script>
+<style lang="scss">
+.cm-s-mdn-like .cm-keyword {
+    color: var(--el-color-primary);
+}
+</style>

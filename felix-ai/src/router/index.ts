@@ -34,5 +34,8 @@ const router = createRouter({
     // }
   ]
 })
-
+router.beforeEach((from, to, next) => {
+  document.title = "Felix.ai"
+  next();
+})
 export default router

@@ -8,10 +8,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AddEditQuery: typeof import('./src/components/AddEditQuery.vue')['default']
+    Analytics: typeof import('./src/components/Analytics.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAutocomplete: typeof import('element-plus/es')['ElAutocomplete']
+    ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBreak: typeof import('element-plus/es')['ElBreak']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCard: typeof import('element-plus/es')['ElCard']
     ElCol: typeof import('element-plus/es')['ElCol']
     ElCollapse: typeof import('element-plus/es')['ElCollapse']
     ElCollapseItem: typeof import('element-plus/es')['ElCollapseItem']
@@ -21,11 +24,13 @@ declare module 'vue' {
     ElForm: typeof import('element-plus/es')['ElForm']
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElIcon: typeof import('element-plus/es')['ElIcon']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
     ElRow: typeof import('element-plus/es')['ElRow']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
+    ElTag: typeof import('element-plus/es')['ElTag']
     ElTextarea: typeof import('element-plus/es')['ElTextarea']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HomeHeader: typeof import('./src/components/HomeHeader.vue')['default']
@@ -41,6 +46,9 @@ declare module 'vue' {
     SQLEditor: typeof import('./src/components/SQLEditor.vue')['default']
     TableComponent: typeof import('./src/components/TableComponent.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
+    VersionHistory: typeof import('./src/components/VersionHistory.vue')['default']
+    Welcome: typeof import('./src/components/Welcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
+    WelcomeUser: typeof import('./src/components/WelcomeUser.vue')['default']
   }
 }

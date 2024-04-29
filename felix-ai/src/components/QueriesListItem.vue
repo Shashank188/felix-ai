@@ -3,7 +3,6 @@ import {
     Clock,
     Edit,
     Histogram,
-    Aim,
 } from '@element-plus/icons-vue';
 import SQLEditor from '@/components/SQLEditor.vue';
 import { watch, ref } from 'vue';
@@ -11,8 +10,7 @@ import { watch, ref } from 'vue';
 enum FeatureEvent {
     EDIT = "edit",
     VERSION = "version",
-    GRAPH = "graph",
-    SCHEMA = "schema",
+    ANALYTICS = "analytics",
 }
 
 const props = defineProps({
@@ -33,7 +31,9 @@ function onIconClick(type: string) {
 }
 
 watch(() => props.activeName, () => {
-    (sqlRef.value as any).refresh();
+    setTimeout(() => {
+        (sqlRef.value as any).refresh();
+    }, 100);
 })
 
 </script>
@@ -41,8 +41,7 @@ watch(() => props.activeName, () => {
     <div class="d-flex justify-content-around w-100 pb-4">
         <el-button type="primary" :icon="Edit" circle @click="onIconClick(FeatureEvent.EDIT)" />
         <el-button type="primary" :icon="Clock" circle @click="onIconClick(FeatureEvent.VERSION)" />
-        <el-button type="primary" :icon="Histogram" circle @click="onIconClick(FeatureEvent.GRAPH)" />
-        <el-button type="primary" :icon="Aim" circle @click="onIconClick(FeatureEvent.SCHEMA)" />
+        <el-button type="primary" :icon="Histogram" circle @click="onIconClick(FeatureEvent.ANALYTICS)" />
     </div>
     <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">SQL Query</div> <el-button type="primary" plain class="m-2"
