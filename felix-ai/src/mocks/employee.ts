@@ -199,7 +199,7 @@ const employeeTableConfig = [
 export const employee: MockData = {
     data: employeeData,
     config: employeeTableConfig,
-    title: "Employee",
+    title: "Employees Query for ABC Labs Ltd.",
     id: "employee",
     desc: "This table contains information about employees",
     sql: `WITH employee_ranking AS (

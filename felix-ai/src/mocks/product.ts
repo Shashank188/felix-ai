@@ -946,7 +946,7 @@ const productTableConfig = [
 export const product: MockData = {
     data: productData,
     config: productTableConfig,
-    title: "Product",
+    title: "Products offered by PQR Store",
     id: "product",
     desc: "This table contains information about products",
     sql: `WITH CUSTOMER AS (

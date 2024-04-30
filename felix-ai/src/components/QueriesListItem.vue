@@ -39,9 +39,12 @@ watch(() => props.activeName, () => {
 </script>
 <template>
     <div class="d-flex justify-content-around w-100 pb-4">
-        <el-button type="primary" :icon="Edit" circle @click="onIconClick(FeatureEvent.EDIT)" />
-        <el-button type="primary" :icon="Clock" circle @click="onIconClick(FeatureEvent.VERSION)" />
-        <el-button type="primary" :icon="Histogram" circle @click="onIconClick(FeatureEvent.ANALYTICS)" />
+        <el-tooltip content="Edit Query"><el-button type="primary" :icon="Edit" circle
+                @click="onIconClick(FeatureEvent.EDIT)" /></el-tooltip>
+        <el-tooltip content="Version History"> <el-button type="primary" :icon="Clock" circle
+                @click="onIconClick(FeatureEvent.VERSION)" /></el-tooltip>
+        <el-tooltip content="Analytics"><el-button type="primary" :icon="Histogram" circle
+                @click="onIconClick(FeatureEvent.ANALYTICS)" /></el-tooltip>
     </div>
     <div class="d-flex justify-content-between">
         <div class="d-flex align-items-center">SQL Query</div> <el-button type="primary" plain class="m-2"
@@ -67,5 +70,4 @@ watch(() => props.activeName, () => {
     &__desc {
         margin-bottom: 0.5rem;
     }
-}
-</style>
+}</style>

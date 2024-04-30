@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { MockData } from '@/mocks';
 import { reactive, ref } from 'vue';
+import { ElNotification } from 'element-plus'
 
 const state = reactive({
     drawer: false,
@@ -36,7 +37,8 @@ function closeQueryDrawer() {
 }
 
 function onSubmit() {
-    emit('onSubmit', state.data)
+    emit('onSubmit', state.data);
+    showSuccess("Query Saved Successfully.")
 }
 
 async function onGenerateQuery() {
@@ -61,6 +63,16 @@ async function onGenerateQuery() {
         }
     }
 }
+
+function showSuccess(message: string) {
+    ElNotification({
+        title: 'Success',
+        message,
+        type: 'success',
+        position: 'bottom-right'
+    })
+}
+
 defineExpose({
     openQueryDrawer,
     closeQueryDrawer

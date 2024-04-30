@@ -1,16 +1,23 @@
 <template>
-    <div class="login-container">
-        <el-form ref="loginForm" :v-model="state.loginForm" class="login-form" @submit.native.prevent="handleLogin">
-            <el-form-item label="Username" prop="username">
-                <el-input v-model="state.loginForm.username" placeholder="Username"></el-input>
-            </el-form-item>
-            <el-form-item label="Password" prop="password">
-                <el-input type="password" v-model="state.loginForm.password" placeholder="Password"></el-input>
-            </el-form-item>
-            <el-form-item>
-                <el-button type="primary" native-type="submit">Login</el-button>
-            </el-form-item>
-        </el-form>
+    <div class="login">
+        <el-row style="height: 100%;" justify="center">
+            <el-col class="d-flex align-items-start" :span="6">
+                <div class="form-container">
+                    <el-form ref="loginForm" :v-model="state.loginForm" class="login-form"
+                        @submit.native.prevent="handleLogin">
+                        <el-form-item label="Username" prop="username">
+                            <el-input v-model="state.loginForm.username" placeholder="Username"></el-input>
+                        </el-form-item>
+                        <el-form-item label="Password" prop="password">
+                            <el-input type="password" v-model="state.loginForm.password" placeholder="Password"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" native-type="submit">Login</el-button>
+                        </el-form-item>
+                    </el-form>
+                </div>
+            </el-col>
+        </el-row>
     </div>
 </template>
    
@@ -21,7 +28,7 @@ import { useRouter, type Router } from 'vue-router'
 import { ElForm, ElFormItem, ElInput, ElButton } from 'element-plus';
 
 const state = reactive({
-    loginForm: {username: "admin", password: "admin"}
+    loginForm: { username: "admin12345", password: "admin12345Password" }
 });
 
 const router: Router = useRouter();
@@ -31,15 +38,7 @@ function handleLogin() {
 }
 </script>
    
-<style scoped>
-.login-container {
-    width: 300px;
-    margin: 0 auto;
-    padding-top: 100px;
-}
+<style scoped lang="scss">
 
-.login-form {
-    width: 100%;
-}
 </style>
    

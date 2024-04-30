@@ -1,0 +1,26 @@
+.form-container {
+    width: 400px;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.login {
+    height: calc(100vh - 3rem);
+    background-image: linear-gradient(325deg,
+            hsl(240deg 93% 22%) 0%,
+            hsl(239deg 73% 37%) 8%,
+            hsl(239deg 69% 55%) 21%,
+            hsl(238deg 84% 67%) 39%,
+            hsl(238deg 88% 75%) 57%,
+            hsl(238deg 93% 81%) 74%,
+            hsl(238deg 96% 85%) 89%,
+            hsl(238deg 100% 88%) 100%);
+}
+
+.login-form {
+    width: 100%;
+}

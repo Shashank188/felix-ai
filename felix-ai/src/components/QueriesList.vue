@@ -31,7 +31,8 @@ function onAddNewQuery() {
             <el-input v-model="state.searchQuery" style="width: 320px" placeholder="Search SQL Queries..." clearable
                 @change="emit('onInputSearch', state.searchQuery)" />
 
-            <el-button type="primary" :icon="Plus" circle @click="onAddNewQuery()" />
+            <el-tooltip content="Add New Query"><el-button type="primary" :icon="Plus" circle
+                    @click="onAddNewQuery()" /></el-tooltip>
         </div>
         <el-collapse class="query-list-container" v-model="state.activeName" accordion>
             <el-collapse-item v-for="(item, index) of props.data" :name="item.id" :key="index">

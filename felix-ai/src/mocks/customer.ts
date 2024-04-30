@@ -1219,7 +1219,7 @@ const customerData: Array<Customer> = [
 export const customer: MockData = {
     data: customerData,
     config: customerTableConfig,
-    title: "Customer",
+    title: "Get Customers Data for 2024",
     id: "customer",
     desc: "This table contains information about customers",
     sql: `WITH CUSTOMER AS (

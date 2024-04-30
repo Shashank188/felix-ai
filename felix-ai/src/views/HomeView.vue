@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue'
+import { reactive, ref, onBeforeUnmount } from 'vue'
 import mocks, { type MockData } from "@/mocks";
 import TableComponent from "@/components/TableComponent.vue";
 import QueriesList from "@/components/QueriesList.vue";
@@ -55,6 +55,10 @@ function onSubmit(data: MockData) {
   (addEditRef?.value as any).closeQueryDrawer();
 
 }
+
+onBeforeUnmount(() => {
+  state.selectedQueryId = ""
+})
 
 </script>
 <template>
