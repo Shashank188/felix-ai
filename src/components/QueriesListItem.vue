@@ -4,6 +4,7 @@ import {
     Edit,
     Histogram,
 } from '@element-plus/icons-vue';
+// @ts-ignore
 import SQLEditor from '@/components/SQLEditor.vue';
 import { watch, ref } from 'vue';
 

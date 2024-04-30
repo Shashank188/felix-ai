@@ -3,7 +3,7 @@
         ref="cmRef" />
 </template>
   
-<script setup lang="ts">
+<script setup>
 import Codemirror from "codemirror-editor-vue3";
 import "codemirror/addon/display/placeholder.js";
 import 'codemirror/mode/sql/sql.js';
@@ -32,7 +32,7 @@ function change() {
 
 }
 function refresh() {
-    (cmRef.value as any).refresh()
+    (cmRef.value).refresh()
 }
 
 defineExpose({ refresh })
