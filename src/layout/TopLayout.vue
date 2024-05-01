@@ -6,16 +6,15 @@ const circleUrl = 'https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1ep
 </script>
 <template>
     <div class="d-flex align-items-center justify-content-between topbar">
-        <div class="heading">Felix.ai</div>
+        <div><img src="/logo.svg"  class="heading" alt="logo"></div>
         <el-avatar  v-if="route.name !=='login'" :size="30" :src="circleUrl" />
     </div>
 </template>
 <style lang="scss">
 
 .heading {
-    color: #2026d2;
-    font-size: 30px;
-    font-weight: 600;
+    height: 4rem;
+    padding: 0.5rem;
 }
 
 </style>

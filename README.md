@@ -1,45 +1,65 @@
-# felix-ai
 
-This template should help get you started developing with Vue 3 in Vite.
+![Logo](./public/logo.svg)
 
-## Recommended IDE Setup
+The SQL web interface application provides a user-friendly platform for managing databases via a web browser. Users can execute SQL queries, view, edit, and manipulate data tables, and perform database administration tasks seamlessly. With intuitive controls and interactive visualizations, it streamlines database management for both novice and experienced users.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
+## Demo
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Features
 
-```sh
-npm install
+Crucial Features
+- Tabular view
+- AI Generation of SQL Queries
+- Creating SQL queries
+- Export Data
+
+Additional Features
+- Version History
+- Most Used Queries
+- Analytics Data
+- Search
+- Notification Serice
+
+    
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Shashank188/felix-ai.git
 ```
 
-### Compile and Hot-Reload for Development
+Go to the project directory
 
-```sh
-npm run dev
+```bash
+  cd felix-ai
 ```
 
-### Type-Check, Compile and Minify for Production
+Install dependencies
 
-```sh
-npm run build
+```bash
+  npm install
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Start the server
 
-```sh
-npm run test:unit
+```bash
+  npm run dev
 ```
 
-### Lint with [ESLint](https://eslint.org/)
 
-```sh
-npm run lint
-```
+## Tech Stack
+
+**Client:** 
+
+**Server:**
+
+
+
+## Optimizations
+
+What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility

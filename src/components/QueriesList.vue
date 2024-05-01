@@ -49,7 +49,7 @@ function onAddNewQuery() {
 <style lang="scss">
 .query-list-container {
     padding: 1rem 1rem 1rem 2rem;
-    height: 85vh;
+    height: 84vh;
     overflow: scroll;
 }
 </style>
