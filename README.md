@@ -45,8 +45,9 @@ The SQL web interface application provides a user-friendly platform for managing
 ## Load Time and Optimizations
 Reduced css file by tree shaking Bootstrap
 Improved Score of Site by 9 points from 85 to 94
-<img width="611" alt="Screenshot 2024-05-01 at 8 54 02 PM" src="https://github.com/Shashank188/felix-ai/assets/49895806/794bdd04-9743-47ee-8e81-ac58c6bb72e0">
-[Report.pdf](https://github.com/Shashank188/felix-ai/files/15179078/download.pdf)
+- <img width="611" alt="Screenshot 2024-05-01 at 8 54 02 PM" src="https://github.com/Shashank188/felix-ai/assets/49895806/794bdd04-9743-47ee-8e81-ac58c6bb72e0">
+
+- [Report.pdf](https://github.com/Shashank188/felix-ai/files/15179078/download.pdf)
 
 
 
