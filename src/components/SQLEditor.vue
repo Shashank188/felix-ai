@@ -37,8 +37,3 @@ function refresh() {
 
 defineExpose({ refresh })
 </script>
-<style lang="scss">
-.cm-s-mdn-like .cm-keyword {
-    color: var(--el-color-primary);
-}
-</style>

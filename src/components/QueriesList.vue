@@ -45,11 +45,3 @@ function onAddNewQuery() {
         </el-collapse>
     </div>
 </template>
-
-<style lang="scss">
-.query-list-container {
-    padding: 1rem 1rem 1rem 2rem;
-    height: 84vh;
-    overflow: scroll;
-}
-</style>

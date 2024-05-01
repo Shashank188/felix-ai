@@ -17,10 +17,3 @@ import { RouterView } from 'vue-router'
         </el-main>
     </el-container>
 </template>
-<style lang="scss">
-.main {
-    height: 100vh;
-    width: 100%;
-    display: contents;
-}
-</style>

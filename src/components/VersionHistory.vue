@@ -55,17 +55,3 @@ defineExpose({
         </div>
     </el-drawer>
 </template>
-<style lang="scss" scoped>
-.version {
-    &:hover {
-        background-color: #efefff;
-    }
-
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-}
-
-.updated {
-    color: rgb(114, 118, 123)
-}
-</style>

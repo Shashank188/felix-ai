@@ -1,4 +1,4 @@
-// @import "bootstrap/scss/bootstrap";
+// Bootstrap
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 
@@ -9,16 +9,21 @@
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/reboot";
 
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
 
-
-
+// Element Plus 
 @import '@element-plus/theme-chalk/dist/index.css';
 
+
+// Layout
 @import "layout/content.scss";
 
+// View
 @import "views/login.scss";
 
+// components
 @import "components/query.scss";
+@import "components/table.scss";
+@import "components/version.scss";
+@import "components/welcome.scss";

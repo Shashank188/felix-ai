@@ -8,3 +8,23 @@
     max-height: 12rem;
     padding: 20px;
 }
+
+.query-list-container {
+    padding: 1rem 1rem 1rem 2rem;
+    height: 84vh;
+    overflow: scroll;
+}
+
+.meta-data {
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    &__desc {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.cm-s-mdn-like .cm-keyword {
+    color: var(--el-color-primary);
+}

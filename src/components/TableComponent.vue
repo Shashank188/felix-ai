@@ -39,16 +39,6 @@ function onExportData() {
         </div>
     </div>
 </template>
-<style lang="scss" scoped>
-.table-container {
-    margin: 0rem 2rem 0rem 1rem;
-}
-
-.table {
-    border: 1px solid #dee2e6;
-
-}
-</style>
 
   
 

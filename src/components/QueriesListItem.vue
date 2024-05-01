@@ -60,15 +60,3 @@ watch(() => props.activeName, () => {
         <div></div>
     </div>
 </template>
-
-
-<style lang="scss" scoped>
-.meta-data {
-    border: 0.1rem solid #ddd;
-    border-radius: 0.5rem;
-    padding: 1rem;
-
-    &__desc {
-        margin-bottom: 0.5rem;
-    }
-}</style>

@@ -44,6 +44,7 @@ function onSubmit() {
 async function onGenerateQuery() {
     if (state.prompt) {
         let generatedQuery = "";
+        // MOCK: Mock query
         const sql = `SELECT 
         product_category, 
         SUM(sales_amount) AS total_sales

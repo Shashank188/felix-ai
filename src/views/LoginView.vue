@@ -38,7 +38,3 @@ function handleLogin() {
 }
 </script>
    
-<style scoped lang="scss">
-
-</style>
-   

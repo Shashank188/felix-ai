@@ -17,11 +17,3 @@ const emit = defineEmits(["onTagClick"])
 
     </div>
 </template>
-<style>
-.heading {
-    color: var(--el-color-primary)
-}
-.tag {
-    cursor: pointer;
-}
-</style>
