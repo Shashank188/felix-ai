@@ -26,7 +26,7 @@ The SQL web interface application provides a user-friendly platform for managing
 - Most Used Queries
 - Analytics Data
 - Search
-- Notification Serice
+- Notification Service
 
 ## Packages used
 - [Element Plus](https://www.npmjs.com/package/element-plus)
@@ -40,7 +40,7 @@ The SQL web interface application provides a user-friendly platform for managing
 - TypeScript
 - SCSS
 - NPM
-- Element PLus, CodeMirror, Bootstrap
+- Element Plus, CodeMirror, Bootstrap
 
 ## Load Time and Optimizations
 Reduced css file by tree shaking Bootstrap
